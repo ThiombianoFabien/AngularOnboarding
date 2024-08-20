@@ -37,7 +37,7 @@
                 </select>
             </div>
             <div class="btn-group float-end">
-                <button *ngFor="let page of pageNumbers()" class="btn btn-outline-primary" 
+                <button *counter="let page of pageCount()" class="btn btn-outline-primary" 
                 (click)="changePage(page)" 
                 [class.active]="page == selectedPage()"
                 >{{page}}
