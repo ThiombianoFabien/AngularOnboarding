@@ -29,7 +29,7 @@ export class Cart {
     return this.linesSignal.asReadonly();
   }
 
-  addLine(product: Product, quantity: number) {
+  addLine(product: Product, quantity: number = 1) {
     this.linesSignal.mutate((linesArray) => {
       let line = linesArray.find((l) => l.product.id == product.id);
       if (line != undefined) {

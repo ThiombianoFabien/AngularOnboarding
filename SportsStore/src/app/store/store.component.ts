@@ -1,6 +1,7 @@
 import { Component, Signal, computed, signal } from '@angular/core';
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
+import { Cart } from '../model/cart.model';
 
 @Component({
   selector: 'store',
@@ -16,7 +17,7 @@ export class StoreComponent {
   // pageNumbers: Signal<number[]>;
   pageCount: Signal<number>;
 
-  constructor(private repository: ProductRepository) {
+  constructor(private repository: ProductRepository, private cart: Cart) {
     // this.products = this.repository.products;
     this.products = computed(() => {
       if (this.selectedCategory() == undefined) {
@@ -51,6 +52,10 @@ export class StoreComponent {
     //     .fill(0)
     //     .map((x, i) => i + 1);
     // });
+  }
+
+  addProductToCart(product: Product) {
+    this.cart.addLine(product);
   }
 
   changeCategory(newCategory?: string) {
