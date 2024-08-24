@@ -10,6 +10,7 @@ import { CartDetailComponent } from './store/cartDetail.component';
 import { CheckoutComponent } from './store/checkout.component';
 import { StoreFirstGuard } from './storeFirst.guard';
 import { AuthComponent } from './admin/auth.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,6 +42,7 @@ import { AuthComponent } from './admin/auth.component';
 
       { path: '**', redirectTo: '/store' },
     ]),
+    BrowserAnimationsModule,
   ],
   providers: [StoreFirstGuard],
   bootstrap: [AppComponent],
