@@ -21,8 +21,8 @@
     <tr mat-header-row *matHeaderRowDef="colsAndRows"></tr>
     <tr mat-row *matRowDef="let row; columns: colsAndRows"></tr>
 </table>
-<button mat-flat-button color="primary"
- routerLink="/admin/main/products/create"
- >
-    Create New Product
-</button>
+
+<div class="bottom-box">
+    <button mat-flat-button color="primary" routerLink="/admin/main/products/create">Create New Product</button>
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+</div>

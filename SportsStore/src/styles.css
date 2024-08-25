@@ -77,3 +77,17 @@ table[mat-table] .mat-column-buttons {
 table[mat-table]+button[mat-flat-button] {
     margin-top: 10px;
 }
+
+.bottom-box {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.bottom-box>button[mat-flat-button] {
+    margin-top: 10px;
+}
+
+.bottom-box mat-paginator {
+    float: right;
+    font-size: 14px;
+}
